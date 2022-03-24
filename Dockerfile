@@ -1,3 +1,5 @@
-FROM tomcat:8.0.20-jre8
-# Dummy text to test 
-COPY target/java-web-app*.war /usr/local/tomcat/webapps/java-web-app.war
+FROM openjdk:11
+ENV testvariable=lakshmi
+ENV appVersion=12
+RUN echo "Testing liquibase $testvariable"
+RUN echo "Testing liquibases $appVersion"
